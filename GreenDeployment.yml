@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: GreenDev-Deployment 
+spec: 
+  replicas: 1 
+  selector:
+    matchLabels:
+      app: GreenDev-Pods
+  template:
+    metadata:
+      labels:
+        app: GreenDev-Pods
+    spec: 
+      metadata:
+        - name: GreenDev-Container 
+          image: sunloid04/green:latest
+  

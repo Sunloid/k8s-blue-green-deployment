@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: BlueEnv-Deployment
+spec: 
+  replicas: 1 
+  selector: 
+    matchLabels: 
+      app: BlueEnv-Pods
+  template:
+    metadata:
+      labels: 
+        app: BlueEnv-Pods
+    spec: 
+      containers: 
+        - name: BlueEnv-Container
+          image: sunloid04/blue:latest 
