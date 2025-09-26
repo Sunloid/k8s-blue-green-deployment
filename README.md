@@ -8,3 +8,7 @@
 This helps in updating applications with zero downtime. Making it more convienent for the user. 
 One of the drawbacks is the fact that there would be 2 seperate servers running simultaneously and both need to updated one by one. 
 
+## Workflow: 
+1. Blue and Green Initially are identical. Blue has the traffic using ActiveServiceBlue.yaml and green is idle 
+2. Green is then updated and tested. The traffic is then shifted to Green from Blue using ActiveServiceGreen.yml and blue is left idle 
+3. Then blue is updated with ease
