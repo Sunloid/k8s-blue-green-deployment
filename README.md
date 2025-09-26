@@ -12,3 +12,6 @@ One of the drawbacks is the fact that there would be 2 seperate servers running 
 1. Blue and Green Initially are identical. Blue has the traffic using ActiveServiceBlue.yaml and green is idle 
 2. Green is then updated and tested. The traffic is then shifted to Green from Blue using ActiveServiceGreen.yml and blue is left idle 
 3. Then blue is updated with ease
+
+## How to update the Green File: 
+1. After the traffic has been allocated to the Blue version the green file should be updated by the changes in the index.html in the folder. Replace the current lines with the commented ones 
